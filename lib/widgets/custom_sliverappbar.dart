@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fall_2023/themes/main_theme.dart';
 
 class CustomSliverAppBar extends StatelessWidget {
   const CustomSliverAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
-    IconThemeData iconTheme = Theme.of(context).iconTheme;
-    TextTheme textTheme = Theme.of(context).textTheme;
-    ColorScheme colorScheme = Theme.of(context).colorScheme;
+    IconThemeData iconTheme = mainTheme.iconTheme;
+    TextTheme textTheme = mainTheme.textTheme;
+    ColorScheme colorScheme = mainTheme.colorScheme;
     return SliverAppBar(
       forceElevated: true,
       pinned: true,
@@ -21,7 +22,8 @@ class CustomSliverAppBar extends StatelessWidget {
           ),
         ),
       ],
-      backgroundColor: colorScheme.primary,
+      backgroundColor: colorScheme.onPrimary,
+      surfaceTintColor: Colors.transparent,
       leading: IconButton(
         onPressed: () {},
         icon: Icon(
