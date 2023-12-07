@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fall_2023/themes/main_theme.dart';
+import 'package:flutter_fall_2023/widgets/cards_widget.dart';
 import 'package:flutter_fall_2023/widgets/custom_persistentheader.dart';
 import 'package:flutter_fall_2023/widgets/custom_sliverappbar.dart';
 import 'package:flutter_fall_2023/widgets/sliverchild_item_widget.dart';
@@ -8,26 +10,24 @@ class MyHomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: mainTheme.colorScheme.surface,
         body: DefaultTabController(
           length: 2,
           child: NestedScrollView(
             headerSliverBuilder:
                 (BuildContext context, bool innerBoxIsScrolled) {
               return [
-                CustomSliverAppBar(),
-                CustomPersistentHeader(),
+                const CustomSliverAppBar(),
+                const CustomPersistentHeader(),
               ];
             },
             body: ListView(
               children: [
                 SliverChildItemWidget(
-                  contentWidget: SizedBox(
-                    height: 100,
-                    width: 300,
-                    child: ColoredBox(color: Color.fromARGB(255, 7, 239, 7)),
-                  ),
+                  contentWidget: CardsWidget(),
                   title: "У вас подключено",
-                  subtitle: "dfdkfmdsmfksdmfkj",
+                  subtitle:
+                      "Подписки, автоплатежи и сервисы, на которые вы подписались",
                 ),
                 SliverChildItemWidget(
                   contentWidget: SizedBox(
@@ -36,8 +36,8 @@ class MyHomeScreen extends StatelessWidget {
                     child: ColoredBox(
                         color: const Color.fromARGB(255, 202, 209, 202)),
                   ),
-                  title: "dfsdfsdfsdf",
-                  subtitle: "dfdkfmdsmfksdmfkj",
+                  title: "Тарифы и лимиты",
+                  subtitle: "Для операций в Сбербанк Онлайн",
                 ),
                 SliverChildItemWidget(
                   contentWidget: SizedBox(
@@ -46,8 +46,9 @@ class MyHomeScreen extends StatelessWidget {
                     child: ColoredBox(
                         color: const Color.fromARGB(255, 202, 209, 202)),
                   ),
-                  title: "dfsdfsdfsdf",
-                  subtitle: "dfdkfmdsmfksdmfkj",
+                  title: "Интересы",
+                  subtitle:
+                      "Мы подбираем истории и предложения по темам, которые вам нравятся",
                 ),
               ],
             ),
