@@ -9,3 +9,5 @@ A new Flutter project.
     - Pixel 6 Pro API 32
     - Pixel 4 API 31
     - Pixel XL API 31
+
+С темами приложения возникли проблемы, из-за чего пришлось использовать некрасивое решение.
