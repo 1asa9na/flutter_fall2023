@@ -11,7 +11,7 @@ class CustomTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     TextTheme textTheme = mainTheme.textTheme;
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 12),
+      padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

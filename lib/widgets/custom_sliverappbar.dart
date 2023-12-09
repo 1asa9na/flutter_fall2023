@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fall_2023/themes/main_theme.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomSliverAppBar extends StatelessWidget {
   const CustomSliverAppBar({super.key});
@@ -15,11 +16,8 @@ class CustomSliverAppBar extends StatelessWidget {
       actions: [
         IconButton(
           onPressed: () {},
-          icon: Icon(
-            Icons.exit_to_app,
-            color: iconTheme.color,
-            size: iconTheme.size,
-          ),
+          icon: SvgPicture.asset("images/exit.svg"),
+          iconSize: iconTheme.size,
         ),
       ],
       backgroundColor: colorScheme.onPrimary,

@@ -7,33 +7,31 @@ class CardsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 162,
-      child: Padding(
-        padding: const EdgeInsets.only(bottom: 32),
-        child: ListView(
-          scrollDirection: Axis.horizontal,
-          children: [
-            CustomCard(
-              icon: SvgPicture.asset(
-                'images/sber.svg',
-                height: 20,
-                fit: BoxFit.fitHeight,
-              ),
-              title: 'СберПрайм',
-              bodyText1: 'Платём 9 июля',
-              bodyText2: '199 ₽ в месяц',
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        padding: const EdgeInsets.only(left: 16, right: 16, bottom: 32),
+        children: [
+          CustomCard(
+            icon: SvgPicture.asset(
+              'images/sber.svg',
+              height: 20,
+              fit: BoxFit.fitHeight,
             ),
-            CustomCard(
-              icon: SvgPicture.asset(
-                'images/percent.svg',
-                height: 36,
-                fit: BoxFit.fitHeight,
-              ),
-              title: 'Переводы',
-              bodyText1: 'Автопродление 21 августа',
-              bodyText2: '199 ₽ в месяц',
+            title: 'СберПрайм',
+            bodyText1: 'Платём 9 июля',
+            bodyText2: '199 ₽ в месяц',
+          ),
+          CustomCard(
+            icon: SvgPicture.asset(
+              'images/percent.svg',
+              height: 36,
+              fit: BoxFit.fitHeight,
             ),
-          ],
-        ),
+            title: 'Переводы',
+            bodyText1: 'Автопродление 21 августа',
+            bodyText2: '199 ₽ в месяц',
+          ),
+        ],
       ),
     );
   }

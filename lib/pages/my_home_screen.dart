@@ -22,6 +22,7 @@ class MyHomeScreen extends StatelessWidget {
               ];
             },
             body: ListView(
+              padding: const EdgeInsets.only(top: 8),
               children: [
                 SliverChildItemWidget(
                   contentWidget: CardsWidget(),

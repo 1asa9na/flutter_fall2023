@@ -66,9 +66,14 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - images/ekaterina.png
-    - images/ggg.png
     - images/sber.svg
     - images/percent.svg
+    - images/exit.svg
+    - images/cross.svg
+    - images/speedometer.svg
+    - images/percent_line.svg
+    - images/send.svg
+    - images/next.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

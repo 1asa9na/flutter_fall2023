@@ -14,18 +14,15 @@ class SliverChildItemWidget extends StatelessWidget {
 
   @override
   Widget build(Object context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          CustomTextWidget(
-            title: title,
-            subtitle: subtitle,
-          ),
-          contentWidget,
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        CustomTextWidget(
+          title: title,
+          subtitle: subtitle,
+        ),
+        contentWidget,
+      ],
     );
   }
 }
