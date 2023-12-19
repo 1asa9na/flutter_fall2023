@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fall_2023/themes/main_theme.dart';
 
 class CustomTextWidget extends StatelessWidget {
   final String title;
@@ -8,9 +9,9 @@ class CustomTextWidget extends StatelessWidget {
       {super.key, required this.title, required this.subtitle});
   @override
   Widget build(BuildContext context) {
-    TextTheme textTheme = Theme.of(context).textTheme;
+    TextTheme textTheme = mainTheme.textTheme;
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

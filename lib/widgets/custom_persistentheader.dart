@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fall_2023/themes/main_theme.dart';
 import 'package:flutter_fall_2023/widgets/sliverappbar_delegate.dart';
 
 class CustomPersistentHeader extends StatelessWidget {
+  const CustomPersistentHeader({super.key});
+
   @override
   Widget build(BuildContext context) {
-    TabBarTheme tabBarTheme = Theme.of(context).tabBarTheme;
+    TabBarTheme tabBarTheme = mainTheme.tabBarTheme;
     return SliverPersistentHeader(
       delegate: SliverAppBarDelegate(
         TabBar(
